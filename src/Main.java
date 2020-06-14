@@ -8,9 +8,8 @@ public class Main {
                 {"7", "8", "9"}
         };
 
-
         // todo: Реализовать отрисовку поля крестиков ноликов - Юрий Андреевич
-
+        print(field);
         // todo: Реализовать выбор позици и его валидацию при помощи ввода с клавиатуры - Дима
         motion(field, ChangePlayer(counter(1)));
         // todo: Реализовать проверку на победу данного массива - Даниил
@@ -49,6 +48,23 @@ public class Main {
                 return field;
             }else{
                 System.out.println("Клетка занята, бери другую");
+            }
+        }
+    }
+    public static void print(String mass[][])
+    {
+        for (int i = 0; i < mass.length; i++) {
+            for (int j = 0; j < mass.length; j++) {
+                System.out.print(" "+ mass[i][j] + " ");
+                if(j!=2)
+                {
+                    System.out.print("|");
+                }
+            }
+            System.out.println();
+            if(i!=2)
+            {
+                System.out.println("-----------");
             }
         }
     }
